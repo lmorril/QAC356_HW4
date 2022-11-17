@@ -1,0 +1,70 @@
+---
+title: "ryx"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{ryx}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(ryx)
+```
+
+# Introduction
+
+This is a package to compute correlations from a data frame. It also creates
+a  custom type called 'ryx' when calling the ryx function, and
+custom functions for printing, summarizing and plotting these objects are 
+in this package.
+
+#  ryx
+Computes the correlations, and stores it in a 'ryx' object that has
+the dependent, independent, and a data frame stored within that contains more
+use info
+
+```{r}
+library(MASS)
+x <- ryx(Boston, y="medv")
+
+#or an example using the independent variable parameter
+data(mtcars)
+x <- ryx(mtcars, y="mpg", x=c("wt", "vs"))
+
+```
+
+# print.ryx
+Takes an ryx object and prints a correlation dataframe displaying
+correlation and significance for each variable.
+
+```{r}
+print(ryx(Boston, y="medv"))
+print(ryx(mtcars, y="mpg", x=c("wt", "vs")))
+```
+
+# summary.ryx
+Provides some summary statistics about the correlations, such as:
+median correlation, range of correlation, how many variables were
+statistically significant.
+
+```{r}
+summary(ryx(Boston, y="medv"))
+summary(ryx(mtcars, y="mpg", x=c("wt", "vs")))
+```
+
+#plot.ryx
+Plots a ryx object as a scatter plot where the x axis is correlation and y-axis are independent
+variables
+
+```{r}
+plot(ryx(Boston, y="medv"))
+plot(ryx(mtcars, y="mpg", x=c("wt", "vs")))
+```
+
