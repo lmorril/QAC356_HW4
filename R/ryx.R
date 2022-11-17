@@ -54,15 +54,16 @@ ryx <- function(data, y, x){
 #' correlation and significance for each variable
 #' @param x A ryx object
 #'
-#' @return A dataframe contaning the correlation and significance of the
+#' @return A dataframe containing the correlation and significance of the
 #' specified object. Has variable, r, p, and sigif column.
 #' @export
 #'
 #' @examples
-#' \dontrun{
-#' print(ryx(Boston, y="medv"))
-#' print(ryx(mtcars, y="mpg", x=c("wt", "vs"))
-#' }
+#' #example 1
+#' #print(ryx(Boston, y="medv"))
+#' #example2
+#' print(ryx(mtcars, y="mpg", x=c("wt", "vs")))
+#'
 print.ryx  <- function(x){
   if(!inherits(x, "ryx")){
     stop("This function requires a object of type 'ryx'")
@@ -82,10 +83,10 @@ print.ryx  <- function(x){
 #' @export
 #'
 #' @examples
-#' \dontrun{
-#' summary(ryx(Boston, y="medv"))
-#' summary(ryx(mtcars, y="mpg", x=c("wt", "vs"))
-#' }
+#'
+#' # summary(ryx(Boston, y="medv"))
+#' summary(ryx(mtcars, y="mpg", x=c("wt", "vs")))
+#'
 summary.ryx <- function(x){
   medianVal = median(x$df$r)
   maxval = max(x$df$r)
@@ -109,10 +110,9 @@ summary.ryx <- function(x){
 #' @export
 #'
 #' @examples
-#' \dontrun{
-#' plot(ryx(Boston, y="medv"))
-#' plot(ryx(mtcars, y="mpg", x=c("wt", "vs"))
-#' }
+#' # plot(ryx(Boston, y="medv"))
+#' plot(ryx(mtcars, y="mpg", x=c("wt", "vs")))
+#'
 plot.ryx <- function(x){
   if(!inherits(x, "ryx")){
     stop("This function requires an object of type 'ryx'.")

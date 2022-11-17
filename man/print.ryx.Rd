@@ -2,7 +2,7 @@
 % Please edit documentation in R/ryx.R
 \name{print.ryx}
 \alias{print.ryx}
-\title{print}
+\title{print.ryx}
 \usage{
 \method{print}{ryx}(x)
 }
@@ -10,7 +10,7 @@
 \item{x}{A ryx object}
 }
 \value{
-A dataframe contaning the correlation and significance of the
+A dataframe containing the correlation and significance of the
 specified object. Has variable, r, p, and sigif column.
 }
 \description{
@@ -18,8 +18,9 @@ Takes an ryx object and prints a correlation dataframe displaying
 correlation and significance for each variable
 }
 \examples{
-\dontrun{
-print(ryx(Boston, y="medv"))
-print(ryx(mtcars, y="mpg", x=c("wt", "vs"))
-}
+#example 1
+#print(ryx(Boston, y="medv"))
+#example2
+print(ryx(mtcars, y="mpg", x=c("wt", "vs")))
+
 }

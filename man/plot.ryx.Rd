@@ -2,7 +2,7 @@
 % Please edit documentation in R/ryx.R
 \name{plot.ryx}
 \alias{plot.ryx}
-\title{plot}
+\title{plot.ryx}
 \usage{
 \method{plot}{ryx}(x)
 }
@@ -17,8 +17,7 @@ Plots a ryx object as a scatter plot where the x axis is correlation and y-axis 
 variables
 }
 \examples{
-\dontrun{
-plot(ryx(Boston, y="medv"))
-plot(ryx(mtcars, y="mpg", x=c("wt", "vs"))
-}
+# plot(ryx(Boston, y="medv"))
+plot(ryx(mtcars, y="mpg", x=c("wt", "vs")))
+
 }

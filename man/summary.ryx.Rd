@@ -2,7 +2,7 @@
 % Please edit documentation in R/ryx.R
 \name{summary.ryx}
 \alias{summary.ryx}
-\title{summary}
+\title{summary.ryx}
 \usage{
 \method{summary}{ryx}(x)
 }
@@ -18,8 +18,8 @@ median correlation, range of correlation, how many variables were
 statistically significant.
 }
 \examples{
-\dontrun{
-summary(ryx(Boston, y="medv"))
-summary(ryx(mtcars, y="mpg", x=c("wt", "vs"))
-}
+
+# summary(ryx(Boston, y="medv"))
+summary(ryx(mtcars, y="mpg", x=c("wt", "vs")))
+
 }
