@@ -59,7 +59,7 @@ summary(ryx(Boston, y="medv"))
 summary(ryx(mtcars, y="mpg", x=c("wt", "vs")))
 ```
 
-#plot.ryx
+# plot.ryx
 Plots a ryx object as a scatter plot where the x axis is correlation and y-axis are independent
 variables
 

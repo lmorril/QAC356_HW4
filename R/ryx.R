@@ -19,7 +19,7 @@
 #' \dontrun{
 #' #calculate correlation on 'medv' in the dataframe, uses all numeric columns
 #' ryx(Boston, y="medv")
-#' #can specify indepenent vars, and be assigned to a var
+#' #can specify independent vars, and be assigned to a var
 #' x <- ryx(mtcars, y="mpg", x=c("wt", "vs"))
 #' }
 #'
@@ -60,8 +60,6 @@ ryx <- function(data, y, x){
 #'
 #' @examples
 #' #example 1
-#' #print(ryx(Boston, y="medv"))
-#' #example2
 #' print(ryx(mtcars, y="mpg", x=c("wt", "vs")))
 #'
 print.ryx  <- function(x){
@@ -84,7 +82,6 @@ print.ryx  <- function(x){
 #'
 #' @examples
 #'
-#' # summary(ryx(Boston, y="medv"))
 #' summary(ryx(mtcars, y="mpg", x=c("wt", "vs")))
 #'
 summary.ryx <- function(x){
@@ -110,7 +107,6 @@ summary.ryx <- function(x){
 #' @export
 #'
 #' @examples
-#' # plot(ryx(Boston, y="medv"))
 #' plot(ryx(mtcars, y="mpg", x=c("wt", "vs")))
 #'
 plot.ryx <- function(x){
